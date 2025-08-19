@@ -1,3 +1,4 @@
+import { apiEndpoint, repositoryName } from "./slicemachine.config.json";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -8,6 +9,14 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/ui',
-    '@nuxt/content'
-  ]
+    '@nuxt/content',
+    "@nuxtjs/prismic"
+  ],
+
+  prismic: {
+    endpoint: apiEndpoint || repositoryName
+  },
+  build: {
+    standalone: true,
+  }
 })
