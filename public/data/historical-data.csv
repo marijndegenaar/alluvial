@@ -1,0 +1,24 @@
+type,id,name,x_position,source,target,value,description
+node,0,Geopolitical Conflicts,0,,,,
+node,1,Social Movements,0,,,,
+node,2,Intellectual Archievements,0,,,,
+node,3,Institutions,0,,,,
+node,4,1900-1910,1,,,,
+node,5,1910-1920,1,,,,
+node,6,1920-1930,1,,,,
+node,7,1930-1940,1,,,,
+node,8,1940-1950,1,,,,
+link,,,,0,4,25,Industrial Revolution to 1900s
+link,,,,0,5,20,Industrial Revolution to 1910s
+link,,,,0,6,15,Industrial Revolution to 1920s
+link,,,,1,5,30,World Wars to 1910s
+link,,,,1,7,35,World Wars to 1930s
+link,,,,1,8,40,World Wars to 1940s
+link,,,,2,4,20,Colonialism to 1900s
+link,,,,2,5,18,Colonialism to 1910s
+link,,,,2,6,15,Colonialism to 1920s
+link,,,,2,7,12,Colonialism to 1930s
+link,,,,2,8,8,Colonialism to 1940s
+link,,,,3,6,25,Economic Crisis to 1920s
+link,,,,3,7,45,Economic Crisis to 1930s
+link,,,,3,8,20,Economic Crisis to 1940s
