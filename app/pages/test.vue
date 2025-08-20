@@ -1,6 +1,7 @@
 <template>
   <div class="diagram">
-    <h1>Historical Themes Flow Through Decades (1900-1950)</h1>
+    <NuxtLink to="/test">Test 1</NuxtLink>
+    <NuxtLink to="/test2">Test 2</NuxtLink>
     <div ref="chartContainer" class="chart-container"></div>
     <div v-if="loading" class="loading">Loading data...</div>
     <div v-if="error" class="error">Error loading data: {{ error }}</div>

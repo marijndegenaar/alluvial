@@ -1,6 +1,7 @@
 <template>
   <div class="diagram">
-    <h1>Eduvia Educational History: Themes to Years (1900-1955)</h1>
+    <NuxtLink to="/test">Test 1</NuxtLink>
+    <NuxtLink to="/test2">Test 2</NuxtLink>
     <div ref="chartContainer" class="chart-container"></div>
     <div v-if="loading" class="loading">Loading data...</div>
     <div v-if="error" class="error">{{ error }}</div>
