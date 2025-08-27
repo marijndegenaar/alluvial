@@ -19,34 +19,15 @@
           "placeholder": ""
         }
       },
-      "event": {
-        "type": "Group",
+      "csv_file": {
+        "type": "Link",
         "config": {
-          "label": "Event",
-          "repeat": true,
-          "fields": {
-            "year": {
-              "type": "Number",
-              "config": {
-                "label": "Year",
-                "placeholder": ""
-              }
-            },
-            "event_title": {
-              "type": "Text",
-              "config": {
-                "label": "Event title",
-                "placeholder": ""
-              }
-            },
-            "description": {
-              "type": "Text",
-              "config": {
-                "label": "Description",
-                "placeholder": ""
-              }
-            }
-          }
+          "label": "CSV File",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
         }
       },
       "slices": {

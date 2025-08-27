@@ -16,6 +16,9 @@
     "@nuxt/image": "1.11.0",
     "@nuxt/scripts": "0.11.10",
     "@nuxt/ui": "3.3.2",
+    "@nuxtjs/prismic": "^4.1.0",
+    "@prismicio/client": "^7.20.1",
+    "@prismicio/vue": "^5.3.0",
     "@types/d3": "^7.4.3",
     "@unhead/vue": "^2.0.3",
     "better-sqlite3": "^12.2.0",
@@ -28,7 +31,6 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@nuxtjs/prismic": "^4.0.0",
     "@slicemachine/adapter-nuxt": "^0.3.83",
     "slice-machine-ui": "^2.18.1"
   }

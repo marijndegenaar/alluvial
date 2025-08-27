@@ -76,6 +76,17 @@ type AboutDocumentDataSlicesSlice = never;
  */
 interface AboutDocumentData {
   /**
+   * Title field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
    * Content field in *About*
    *
    * - **Field Type**: Rich Text
@@ -141,41 +152,6 @@ interface AboutDocumentData {
 export type AboutDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
 
-/**
- * Item in *Diagram → Event*
- */
-export interface DiagramDocumentDataEventItem {
-  /**
-   * Year field in *Diagram → Event*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: diagram.event[].year
-   * - **Documentation**: https://prismic.io/docs/fields/number
-   */
-  year: prismic.NumberField;
-
-  /**
-   * Event title field in *Diagram → Event*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: diagram.event[].event_title
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  event_title: prismic.KeyTextField;
-
-  /**
-   * Description field in *Diagram → Event*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: diagram.event[].description
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  description: prismic.KeyTextField;
-}
-
 type DiagramDocumentDataSlicesSlice = never;
 
 /**
@@ -194,15 +170,21 @@ interface DiagramDocumentData {
   title: prismic.KeyTextField;
 
   /**
-   * Event field in *Diagram*
+   * CSV File field in *Diagram*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: diagram.event[]
+   * - **API ID Path**: diagram.csv_file
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  event: prismic.GroupField<Simplify<DiagramDocumentDataEventItem>>;
+  csv_file: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 
   /**
    * Slice Zone field in *Diagram*
@@ -291,7 +273,6 @@ declare module "@prismicio/client" {
       AboutDocumentDataSlicesSlice,
       DiagramDocument,
       DiagramDocumentData,
-      DiagramDocumentDataEventItem,
       DiagramDocumentDataSlicesSlice,
       AllDocumentTypes,
     };
