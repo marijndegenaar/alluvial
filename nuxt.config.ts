@@ -15,8 +15,5 @@ export default defineNuxtConfig({
 
   prismic: {
     endpoint: apiEndpoint || repositoryName
-  },
-  build: {
-    standalone: true,
   }
 })
