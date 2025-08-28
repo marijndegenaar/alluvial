@@ -15,5 +15,9 @@ export default defineNuxtConfig({
 
   prismic: {
     endpoint: apiEndpoint || repositoryName
+  },
+
+  nitro: {
+    preset: 'vercel'
   }
 })
